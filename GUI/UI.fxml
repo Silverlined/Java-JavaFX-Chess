@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chess.GUI.Controller">
+   <children>
+      <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="0.5" layoutY="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_rook.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteRook" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_knight.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteKnight" layoutX="1.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="85.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_bishop.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteBishop" layoutX="2.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_queen.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteQueen" layoutX="3.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_king.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteKing" layoutX="4.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="310.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_bishop.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteBishop2" layoutX="5.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="310.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_knight.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteKnight2" layoutX="6.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/white_rook.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whiteRook2" layoutX="7.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn1" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn3" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn4" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn5" layoutX="4.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn6" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn7" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="385.0" layoutY="85.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/white_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="whitePawn8" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile1" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile3" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile4" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile5" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile6" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile7" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile8" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile9" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile10" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile11" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile12" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile13" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile14" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile15" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile16" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile17" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile18" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile19" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile20" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile21" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile22" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile23" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile24" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile25" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile26" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile27" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile28" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile29" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile30" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile31" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="5">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="emptyTile32" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile1" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile3" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile4" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile5" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile6" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile7" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_pawn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackTile8" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_rook.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackRook" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_bishop.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackBishop" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_knight.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackKnight" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_queen.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackQueen" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_king.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="BlackKing" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_knight.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackKnight2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_bishop.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackBishop2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/black_rook.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="blackRook2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
