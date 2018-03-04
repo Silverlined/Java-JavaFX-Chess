@@ -7,8 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,7 +16,7 @@ public class Main extends Application {
     @FXML
     static AnchorPane content;
 
-    private static Player whitePlayer = new Player("Hero"), blackPlayer = new Player("Zeus");
+    private static Player whitePlayer, blackPlayer;
     static int fromX, fromY, toX, toY;
     private static Board playingBoard;
     private static boolean isWhiteOnTurn;
@@ -29,6 +27,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        StartMenu.display(whitePlayer = new Player(), blackPlayer = new Player());
+        SetUpGUI(primaryStage);
+        playingBoard = new Board(whitePlayer, blackPlayer);
+        isWhiteOnTurn = true;
+    }
+
+    private void SetUpGUI(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("UI.fxml"));
         Controller controller = loader.getController();
         loader.setRoot(content);
@@ -36,42 +41,71 @@ public class Main extends Application {
         primaryStage.setTitle("ChessThisOut");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        playingBoard = new Board(whitePlayer, blackPlayer);
-        isWhiteOnTurn = true;
     }
 
-    static void play() {
+    static boolean play() {
         if (isWhiteOnTurn) {
-            System.out.println("It was " + whitePlayer.getName() + "'s turn!");
-            whitePlayerTurn();
-            return;
+            return whitePlayerTurn();
         } else {
-            System.out.println("It was " + blackPlayer.getName() + "'s turn!");
-            blackPlayerTurn();
-            return;
+            return blackPlayerTurn();
         }
     }
 
-    private static void whitePlayerTurn() {
+    private static boolean whitePlayerTurn() {
         if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY)) {
             System.out.println("Try again!");
-            return;
+            return false;
         }
-//        if (playingBoard.isCheck(whitePlayer, blackPlayer)) {
-//            System.out.println("Check!");
-//        }
+        showLastMadeMove(whitePlayer, fromX, fromY, toX, toY);
         isWhiteOnTurn = false;
+        return true;
     }
 
-    private static void blackPlayerTurn() {
+    private static boolean blackPlayerTurn() {
         if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY)) {
             System.out.println("Try again!");
-            return;
+            return false;
         }
-//        if (playingBoard.isCheck(blackPlayer, whitePlayer)) {
-//            System.out.println("Check!");
-//        }
+        showLastMadeMove(blackPlayer, fromX, fromY, toX, toY);
         isWhiteOnTurn = true;
+        return true;
+    }
+
+    private static void showLastMadeMove(Player playerOnTurn, int fromX, int fromY, int toX, int toY) {
+        System.out.println(playerOnTurn.getName() + "'s last move:");
+        printTheMove(fromX, fromY);
+        System.out.print(" -> ");
+        printTheMove(toX, toY);
+        System.out.println();
+    }
+
+    private static void printTheMove(int x, int y) {
+        switch (x) {
+            case 0:
+                System.out.print("A");
+                break;
+            case 1:
+                System.out.print("B");
+                break;
+            case 2:
+                System.out.print("C");
+                break;
+            case 3:
+                System.out.print("D");
+                break;
+            case 4:
+                System.out.print("E");
+                break;
+            case 5:
+                System.out.print("F");
+                break;
+            case 6:
+                System.out.print("G");
+                break;
+            case 7:
+                System.out.print("H");
+                break;
+        }
+        System.out.print(String.valueOf(y + 1));
     }
 }

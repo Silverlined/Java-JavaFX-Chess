@@ -1,6 +1,6 @@
 package Chess.board;
 
-import Chess.Piece;
+import Chess.chess.pieces.Piece;
 
 public final class OccupiedTile extends Tile {
 

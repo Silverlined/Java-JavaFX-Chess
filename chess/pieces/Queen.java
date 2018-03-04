@@ -1,9 +1,6 @@
 package Chess.chess.pieces;
 
-import Chess.Piece;
 import Chess.board.Tile;
-
-import java.util.Queue;
 
 public class Queen extends Piece {
 

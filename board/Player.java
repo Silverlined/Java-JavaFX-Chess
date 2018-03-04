@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Player {
-    private final String name;
+    private String name;
     private List<OccupiedTile> pieces;
+
+    public Player() {
+        pieces = new ArrayList<>(16);
+    }
 
     public Player(String name) {
         this.name = name;
@@ -37,5 +41,9 @@ public final class Player {
             }
         }
         return null;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

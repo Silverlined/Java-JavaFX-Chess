@@ -1,4 +1,4 @@
-package Chess;
+package Chess.UnitTest;
 
 import Chess.board.Board;
 import Chess.board.Player;
@@ -19,39 +19,28 @@ public class TryMyChess {
         Board playingBoard = new Board(whitePlayer, blackPlayer);
         int counter = 1;
         drawTheBoard(playingBoard);
-//        while (true) {
-//            if (counter % 2 == 0) {
-//                System.out.println(blackPlayer.getName() + "'s turn!");
-//                makeATurn();
-//                if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY)) {
-//                    System.out.println("Try again!");
-//                    continue;
-//                }
-//                if(playingBoard.isCheck(blackPlayer, whitePlayer)) {
-//                 System.out.println("Check!");
-//                 }
-//            } else {
-//                System.out.println(whitePlayer.getName() + "'s turn!");
-//                makeATurn();
-//                if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY)) {
-//                    System.out.println("Try again!");
-//                    continue;
-//                }
-//                if(playingBoard.isCheck(whitePlayer, blackPlayer)) {
-//                    System.out.println("Check!");
-//                }
-//            }
-//            counter++;
-//            drawTheBoard(playingBoard);
-//        }
-        playingBoard.play(whitePlayer, 3, 1, 3, 3);
-        playingBoard.play(whitePlayer, 3, 0, 3, 2);
-        playingBoard.play(whitePlayer, 3, 2, 0, 5);
-        playingBoard.play(whitePlayer, 4, 0, 3, 0);
-        drawTheBoard(playingBoard);
+        while (true) {
+            if (counter % 2 == 0) {
+                System.out.println(blackPlayer.getName() + "'s turn!");
+                makeATurn();
+                if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY)) {
+                    System.out.println("Try again!");
+                    continue;
+                }
+            } else {
+                System.out.println(whitePlayer.getName() + "'s turn!");
+                makeATurn();
+                if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY)) {
+                    System.out.println("Try again!");
+                    continue;
+                }
+            }
+            counter++;
+            drawTheBoard(playingBoard);
+        }
     }
 
-    private static void makeATurn() {
+    private static void makeATurn() throws NumberFormatException{
         System.out.println("Coordinate X of figure you would like to move?");
         fromX = Integer.parseInt(input.nextLine());
         System.out.println("Coordinate Y of figure you would like to move?");

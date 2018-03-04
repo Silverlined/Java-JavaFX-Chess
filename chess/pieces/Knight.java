@@ -1,6 +1,5 @@
 package Chess.chess.pieces;
 
-import Chess.Piece;
 import Chess.board.Tile;
 
 public class Knight extends Piece {

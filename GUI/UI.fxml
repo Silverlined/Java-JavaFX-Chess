@@ -479,7 +479,7 @@
                <children>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/black_bishop.png" />
+                        <Image url="@../images/black_knight.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="blackBishop" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
@@ -489,7 +489,7 @@
                <children>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/black_knight.png" />
+                        <Image url="@../images/black_bishop.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="blackKnight" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
@@ -519,7 +519,7 @@
                <children>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/black_knight.png" />
+                        <Image url="@../images/black_bishop.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="blackKnight2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
@@ -529,7 +529,7 @@
                <children>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/black_bishop.png" />
+                        <Image url="@../images/black_knight.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="blackBishop2" mnemonicParsing="false" onAction="#handleOnClick" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Button" textAlignment="CENTER" />
