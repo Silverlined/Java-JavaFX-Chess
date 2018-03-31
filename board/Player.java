@@ -18,6 +18,11 @@ public final class Player {
         pieces = new ArrayList<>(16);
     }
 
+    public Player(Player player) {
+        this.name = null;
+        this.pieces = player.cloneList();
+    }
+
     public List<OccupiedTile> getPieces() {
         return pieces;
     }
@@ -45,5 +50,9 @@ public final class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    private List<OccupiedTile> cloneList() {
+        return new ArrayList<>(pieces);
     }
 }

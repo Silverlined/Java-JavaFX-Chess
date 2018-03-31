@@ -11,13 +11,14 @@ public abstract class Piece {
     }
 
     public abstract boolean moveIsLegal(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard);
+
     public abstract TypeOfPiece getType();
 
     public byte getColour() {
         return colour;
     }
 
-    protected boolean checkPosition(int newX, int newY){
+    boolean checkPosition(int newX, int newY) {
         return (newX >= 0 && newX < 8) && (newY >= 0 && newY < 8);
     }
 }

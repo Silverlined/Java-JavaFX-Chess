@@ -35,8 +35,8 @@ public class Bishop extends Piece {
     }
 
     private boolean checkLeftBottomDiagonalIsOccupied(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard) {
-        if (newX < fromY && newX < fromY) {
-            for (int i = fromX - 1, j = fromY - 1; i > newX && j > newY; i--, j--) {
+        if (newX > fromY && newX < fromY) {
+            for (int i = fromX - 1, j = fromY + 1; i > newX && j < newY; i--, j++) {
                 if (playingBoard[j][i].isTileOccupied()) {
                     return true;
                 }
@@ -46,8 +46,8 @@ public class Bishop extends Piece {
     }
 
     private boolean checkRightBottomDiagonalIsOccupied(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard) {
-        if (newY < fromY && newX > fromX) {
-            for (int i = fromX + 1, j = fromY - 1; i < newX && j > newY; i++, j--) {
+        if (newY > fromY && newX > fromX) {
+            for (int i = fromX + 1, j = fromY + 1; i < newX && j < newY; i++, j++) {
                 if (playingBoard[j][i].isTileOccupied()) {
                     return true;
                 }
@@ -57,8 +57,8 @@ public class Bishop extends Piece {
     }
 
     private boolean checkLeftTopDiagonalIsOccupied(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard) {
-        if (newY > fromY && newX < fromX) {
-            for (int i = fromX - 1, j = fromY + 1; i > newX && j < newY ; i--, j++) {
+        if (newY < fromY && newX < fromX) {
+            for (int i = fromX - 1, j = fromY - 1; i > newX && j > newY ; i--, j--) {
                 if (playingBoard[j][i].isTileOccupied()) {
                     return true;
                 }
@@ -68,8 +68,8 @@ public class Bishop extends Piece {
     }
 
     private boolean checkRightTopDiagonalIsOccupied(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard) {
-        if (newY > fromY && newX > fromX) {
-            for (int i = fromX + 1, j = fromY + 1; i < newX && j < newY; i++, j++) {
+        if (newY < fromY && newX > fromX) {
+            for (int i = fromX + 1, j = fromY - 1; i < newX && j > newY; i++, j--) {
                 if (playingBoard[j][i].isTileOccupied()) {
                     return true;
                 }

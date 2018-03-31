@@ -11,6 +11,11 @@ public final class OccupiedTile extends Tile {
         this.piece = piece;
     }
 
+    public OccupiedTile(OccupiedTile e) {
+        super(e.getTileCoordinateX(), e.getTileCoordinateY());
+        this.piece = e.getPiece();
+    }
+
     @Override
     public boolean isTileOccupied() {
         return true;

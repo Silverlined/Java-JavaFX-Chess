@@ -3,10 +3,10 @@ package Chess.board;
 import Chess.chess.pieces.Piece;
 
 public abstract class Tile {
-    private int tileCoordinateX;
-    private int tileCoordinateY;
+    private final int tileCoordinateX;
+    private final int tileCoordinateY;
 
-    Tile(int tileCoordinateX, int tileCoordinateY) {
+    Tile(final int tileCoordinateX, final int tileCoordinateY) {
         this.tileCoordinateX = tileCoordinateX;
         this.tileCoordinateY = tileCoordinateY;
     }
@@ -21,13 +21,5 @@ public abstract class Tile {
 
     public int getTileCoordinateY() {
         return tileCoordinateY;
-    }
-
-    public void setTileCoordinateX(int tileCoordinateX) {
-        this.tileCoordinateX = tileCoordinateX;
-    }
-
-    public void setTileCoordinateY(int tileCoordinateY) {
-        this.tileCoordinateY = tileCoordinateY;
     }
 }

@@ -25,9 +25,9 @@ public class Controller {
         } else {
             setNewCoordinates(tempButton);
             if(play()) {
-                removeEffectsTiles();
                 swapChildrenOfChosenPanes();
             }
+            removeEffectsTiles();
         }
     }
 

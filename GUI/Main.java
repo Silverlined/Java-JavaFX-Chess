@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
 public class Main extends Application {
     @FXML
     static AnchorPane content;
@@ -57,6 +56,12 @@ public class Main extends Application {
             return false;
         }
         showLastMadeMove(whitePlayer, fromX, fromY, toX, toY);
+        if (playingBoard.isCheck(whitePlayer, blackPlayer)) {
+            System.out.println("Check!");
+            if (playingBoard.isCheckMate(whitePlayer, blackPlayer).equals("true")) {
+                MessageBox.display("CheckMate");
+            }
+        }
         isWhiteOnTurn = false;
         return true;
     }
@@ -67,6 +72,12 @@ public class Main extends Application {
             return false;
         }
         showLastMadeMove(blackPlayer, fromX, fromY, toX, toY);
+        if (playingBoard.isCheck(blackPlayer, whitePlayer)) {
+            System.out.println("Check!");
+            if (playingBoard.isCheckMate(blackPlayer, whitePlayer).equals("true")) {
+                MessageBox.display("CheckMate");
+            }
+        }
         isWhiteOnTurn = true;
         return true;
     }
@@ -76,7 +87,7 @@ public class Main extends Application {
         printTheMove(fromX, fromY);
         System.out.print(" -> ");
         printTheMove(toX, toY);
-        System.out.println();
+        System.out.println("\n");
     }
 
     private static void printTheMove(int x, int y) {
