@@ -51,7 +51,7 @@ public class Main extends Application {
     }
 
     private static boolean whitePlayerTurn() {
-        if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY)) {
+        if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY, blackPlayer)) {
             System.out.println("Try again!");
             return false;
         }
@@ -67,7 +67,7 @@ public class Main extends Application {
     }
 
     private static boolean blackPlayerTurn() {
-        if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY)) {
+        if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY, whitePlayer)) {
             System.out.println("Try again!");
             return false;
         }

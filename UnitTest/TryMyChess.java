@@ -23,14 +23,14 @@ public class TryMyChess {
             if (counter % 2 == 0) {
                 System.out.println(blackPlayer.getName() + "'s turn!");
                 makeATurn();
-                if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY)) {
+                if (!playingBoard.play(blackPlayer, fromX, fromY, toX, toY, whitePlayer)) {
                     System.out.println("Try again!");
                     continue;
                 }
             } else {
                 System.out.println(whitePlayer.getName() + "'s turn!");
                 makeATurn();
-                if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY)) {
+                if (!playingBoard.play(whitePlayer, fromX, fromY, toX, toY, blackPlayer)) {
                     System.out.println("Try again!");
                     continue;
                 }

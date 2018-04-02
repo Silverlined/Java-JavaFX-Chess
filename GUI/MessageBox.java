@@ -14,7 +14,7 @@ public class MessageBox {
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.setTitle("GameOver");
         primaryStage.setMinWidth(200);
-        primaryStage.setMinHeight(200);
+        primaryStage.setMinHeight(180);
         primaryStage.setOnCloseRequest(e -> System.exit(0));
 
         Label label = new Label(message);
@@ -23,7 +23,7 @@ public class MessageBox {
         layout.setAlignment(Pos.CENTER);
         layout.getChildren().add(label);
 
-        Scene scene = new Scene(layout, 200, 200);
+        Scene scene = new Scene(layout, 200, 180);
 
         primaryStage.setScene(scene);
         primaryStage.showAndWait();

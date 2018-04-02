@@ -106,20 +106,50 @@ public class Board {
         }
     }
 
-    public boolean play(Player player, int fromX, int fromY, int toX, int toY) {
+    public boolean play(Player playerOnTurn, int fromX, int fromY, int toX, int toY, Player player) {
         Tile selected = playingBoard[fromY][fromX];
         if (selected.isTileOccupied()) {
-            if (player.getPieces().contains(selected)) {
+            if (playerOnTurn.getPieces().contains(selected)) {
                 if (selected.getPiece().moveIsLegal(fromX, fromY, toX, toY, playingBoard)) {
-                    player.remove((OccupiedTile) selected);
+                    Tile oldTakenTile = playingBoard[toY][toX];
+                    boolean isTaken = false;
+                    if (player.getPieces().contains(oldTakenTile)) {
+                        player.remove((OccupiedTile) oldTakenTile);
+                        isTaken = true;
+                    }
+                    playerOnTurn.remove((OccupiedTile) selected);
                     playingBoard[toY][toX] = new OccupiedTile(toX, toY, selected.getPiece());
                     playingBoard[fromY][fromX] = new EmptyTile(selected.getTileCoordinateX(), selected.getTileCoordinateY());
-                    player.add((OccupiedTile) playingBoard[toY][toX]);
+                    playerOnTurn.add((OccupiedTile) playingBoard[toY][toX]);
+                    if (!checkForPossibleCheck(playerOnTurn, player)) {
+                        playerOnTurn.remove((OccupiedTile) playingBoard[toY][toX]);
+                        playerOnTurn.add((OccupiedTile) selected);
+                        playingBoard[toY][toX] = oldTakenTile;
+                        playingBoard[fromY][fromX] = selected;
+                        if (isTaken) {
+                            player.add((OccupiedTile) oldTakenTile);
+                        }
+                        return false;
+                    }
                     return true;
                 }
             }
         }
         return false;
+    }
+
+    private boolean checkForPossibleCheck(Player playerMakingTurn, Player player) {
+        boolean flag = true;
+        for (OccupiedTile e : player.getPieces()) {
+            if (e.getPiece().getType() != TypeOfPiece.King) {
+                if (e.getPiece().moveIsLegal(e.getTileCoordinateX(), e.getTileCoordinateY(),
+                        playerMakingTurn.returnTheKing().getTileCoordinateX(), playerMakingTurn.returnTheKing().getTileCoordinateY(), playingBoard)) {
+                    System.out.println(e.getPiece().getType());
+                    flag = false;
+                }
+            }
+        }
+        return flag;
     }
 
     public boolean isCheck(Player playerOnMove, Player playerInDanger) {
@@ -140,6 +170,9 @@ public class Board {
     public String isCheckMate(Player playerOnMove, Player playerInDanger) {
         AtomicBoolean isCheckMate = new AtomicBoolean(true);
         isTheKingAbleToMove(playerOnMove, playerInDanger, isCheckMate);
+        if (isCheckMate.equals(false)) {
+            return isCheckMate.toString();
+        }
         canYouDefendTheKing(playerOnMove, playerInDanger, isCheckMate);
         return isCheckMate.toString();
     }
