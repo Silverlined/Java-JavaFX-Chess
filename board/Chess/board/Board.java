@@ -1,10 +1,6 @@
 package Chess.board;
 
-
-import Chess.chess.pieces.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import pieces.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Board {

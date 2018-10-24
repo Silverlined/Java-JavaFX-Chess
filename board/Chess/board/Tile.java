@@ -1,6 +1,6 @@
 package Chess.board;
 
-import Chess.chess.pieces.Piece;
+import pieces.Piece;
 
 public abstract class Tile {
     private final int tileCoordinateX;

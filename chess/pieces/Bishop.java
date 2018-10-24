@@ -1,4 +1,4 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
 
@@ -24,11 +24,8 @@ public class Bishop extends Piece {
                 if (checkLeftBottomDiagonalIsOccupied(fromX, fromY, newX, newY, playingBoard)) {
                     return false;
                 }
-                if (playingBoard[newY][newX].isTileOccupied()
-                        && playingBoard[newY][newX].getPiece().getColour() == playingBoard[fromY][fromX].getPiece().getColour()) {
-                    return false;
-                }
-                return true;
+                return !playingBoard[newY][newX].isTileOccupied()
+                        || playingBoard[newY][newX].getPiece().getColour() != playingBoard[fromY][fromX].getPiece().getColour();
             }
         }
         return false;

@@ -1,4 +1,4 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
 
@@ -44,14 +44,11 @@ public class Pawn extends Piece {
                     && fromX + 1 == newX
                     && fromY + 1 == newY) {
                 return true;
-            } else if (fromX > 0 && fromY < 7
+            } else return fromX > 0 && fromY < 7
                     && playingBoard[fromY + 1][fromX - 1].isTileOccupied()
                     && playingBoard[fromY + 1][fromX - 1].getPiece().getColour() != playingBoard[fromY][fromX].getPiece().getColour()
                     && fromX - 1 == newX
-                    && fromY + 1 == newY) {
-                return true;
-            }
-        return false;
+                    && fromY + 1 == newY;
     }
 
     private boolean diagonalCheckBlack(int fromX, int fromY, int newX, int newY, Tile[][] playingBoard) {
@@ -61,14 +58,11 @@ public class Pawn extends Piece {
                     && fromX + 1 == newX
                     && fromY - 1 == newY) {
                 return true;
-            } else if (fromX > 0 && fromY > 0
+            } else return fromX > 0 && fromY > 0
                     && playingBoard[fromY - 1][fromX - 1].isTileOccupied()
                     && playingBoard[fromY - 1][fromX - 1].getPiece().getColour() != playingBoard[fromY][fromX].getPiece().getColour()
                     && fromX - 1 == newX
-                    && fromY - 1 == newY) {
-                return true;
-            }
-        return false;
+                    && fromY - 1 == newY;
     }
 
     @Override

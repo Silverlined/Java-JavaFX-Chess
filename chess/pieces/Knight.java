@@ -1,4 +1,4 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
 
@@ -31,9 +31,7 @@ public class Knight extends Piece {
                 }
             }
             if (fromX + 2 < 8) {
-                if (newX == fromX + 2 && newY == fromY + 1) {
-                    return true;
-                }
+                return newX == fromX + 2 && newY == fromY + 1;
             }
         }
         return false;
@@ -47,9 +45,7 @@ public class Knight extends Piece {
                 }
             }
             if (fromX + 1 < 8) {
-                if (newX == fromX + 1 && newY == fromY + 2) {
-                    return true;
-                }
+                return newX == fromX + 1 && newY == fromY + 2;
             }
         }
         return false;
@@ -63,9 +59,7 @@ public class Knight extends Piece {
                 }
             }
             if (fromX + 1 < 8) {
-                if (newX == fromX + 1 && newY == fromY - 2) {
-                    return true;
-                }
+                return newX == fromX + 1 && newY == fromY - 2;
             }
         }
         return false;
@@ -79,9 +73,7 @@ public class Knight extends Piece {
                 }
             }
             if (fromX + 2 < 8) {
-                if (newX == fromX + 2 && newY == fromY - 1) {
-                    return true;
-                }
+                return newX == fromX + 2 && newY == fromY - 1;
             }
         }
         return false;

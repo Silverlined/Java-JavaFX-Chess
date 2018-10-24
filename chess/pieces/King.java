@@ -1,4 +1,4 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
 
@@ -50,9 +50,7 @@ public class King extends Piece {
             if (newX == fromX && newY == fromY) {
                 return false;
             }
-            if ((newX == fromX + 1 || newX == fromX - 1 || newX == fromX) && (newY == fromY + 1 || newY == fromY - 1 || newY == fromY)) {
-                return true;
-            }
+            return (newX == fromX + 1 || newX == fromX - 1 || newX == fromX) && (newY == fromY + 1 || newY == fromY - 1 || newY == fromY);
         }
         return false;
     }

@@ -1,6 +1,7 @@
 package Chess.board;
 
-import Chess.chess.pieces.TypeOfPiece;
+
+import pieces.TypeOfPiece;
 
 import java.util.ArrayList;
 import java.util.List;

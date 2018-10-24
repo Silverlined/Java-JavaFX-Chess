@@ -1,6 +1,7 @@
 package Chess.board;
 
-import Chess.chess.pieces.Piece;
+
+import pieces.Piece;
 
 public final class EmptyTile extends Tile {
 

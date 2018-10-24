@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class Main extends Application {
     @FXML
@@ -26,14 +27,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        StartMenu.display(whitePlayer = new Player(), blackPlayer = new Player());
+        Chess.GUI.StartMenu.display(whitePlayer = new Player(), blackPlayer = new Player());
         SetUpGUI(primaryStage);
         playingBoard = new Board(whitePlayer, blackPlayer);
         isWhiteOnTurn = true;
     }
 
     private void SetUpGUI(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("UI.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Chess/GUI/UI.fxml"));
         Controller controller = loader.getController();
         loader.setRoot(content);
         Scene scene = new Scene(loader.load(), 600, 600);

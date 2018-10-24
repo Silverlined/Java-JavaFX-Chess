@@ -1,7 +1,6 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
-import Chess.chess.pieces.TypeOfPiece;
 
 public abstract class Piece {
     private final byte colour;

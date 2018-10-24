@@ -1,4 +1,4 @@
-package Chess.chess.pieces;
+package pieces;
 
 import Chess.board.Tile;
 
@@ -13,10 +13,8 @@ public class Queen extends Piece {
         if (checkPosition(newX, newY)) {
             Bishop tempBishop = new Bishop((byte) 0);
             Rook tempRook = new Rook((byte)0);
-            if (tempBishop.moveIsLegal(fromX, fromY, newX, newY, playingBoard)
-                    || tempRook.moveIsLegal(fromX, fromY, newX, newY, playingBoard)) {
-                return true;
-            }
+            return tempBishop.moveIsLegal(fromX, fromY, newX, newY, playingBoard)
+                    || tempRook.moveIsLegal(fromX, fromY, newX, newY, playingBoard);
         }
         return false;
     }
